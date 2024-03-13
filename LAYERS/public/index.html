@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Doctor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1>BookYourDoctor</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#medicine">Medicine</a></li>
+                    <li><a href="#">Find a Doctor</a></li>
+                    <li><a href="#">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <h1>Welcome to Book Your Doctor</h1>
+    <form id="booking-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <select required>
+            <option value="">Select a Doctor</option>
+            <option value="doctor1">Doctor 1</option>
+            <option value="doctor2">Doctor 2</option>
+            <!-- Add more doctors here -->
+        </select>
+        <input type="date" required>
+        <button type="submit">Book Appointment</button>
+    </form>
+    <hr class="section-separator">
+    <section id="medicine" class="container">
+        <h2>Order Medicine</h2>
+        <p>Select the medicine you need and add it to your cart.</p>
+        <!-- Medicine Search and List -->
+        <form id="medicine-search">
+            <input type="text" placeholder="Search for medicine...">
+            <button type="submit">Search</button>
+        </form>
+        <div id="medicine-list">
+            <!-- Dynamically list medicines here -->
+        </div>
+    </section>
+    <hr class="section-separator">
+    <section id="cart" class="container">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-summary">
+            <p>Total Amount: <span id="total-amount">$0</span></p>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+        <div id="review-section" class="hidden">
+            <h3>Leave a Review</h3>
+            <textarea id="review-text" placeholder="Write your review here..."></textarea>
+            <button id="submit-review">Submit Review</button>
+        </div>
+    </section>
+        
+    <!-- Add your content and form here -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const medicines = [
+                { name: 'Citrazine', price: 10 },
+                { name: 'Combiflame', price: 15 },
+                { name: 'Dolo 650', price: 5 },
+                { name: 'Vicks Action 500', price: 8 },
+                { name: 'Aspirin', price: 12 },
+                { name: 'Paracetamol', price: 3 },
+                { name: 'Amoxicillin', price: 20 },
+                { name: 'Ibuprofen', price: 18 },
+                { name: 'Metformin', price: 30 },
+                { name: 'Cetirizine', price: 25 },
+            ];
+
+            function displayMedicines(filter = '') {
+                const medicineListElement = document.getElementById('medicine-list');
+                medicineListElement.innerHTML = ''; // Clear current list
+
+                // Filter medicines by the search term
+                const filteredMedicines = medicines.filter(medicine => medicine.name.toLowerCase().includes(filter.toLowerCase()));
+
+                filteredMedicines.forEach(medicine => {
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('medicine-item');
+                    itemElement.innerHTML = `<h3>${medicine.name}</h3><p>$${medicine.price}</p><button onclick="addToCart('${medicine.name}', ${medicine.price})">Add to Cart</button>`;
+                    medicineListElement.appendChild(itemElement);
+                });
+            }
+
+            // Dummy function for adding to cart
+            window.addToCart = function(name, price) {
+                console.log(`Added ${name} - $${price} to cart.`);
+                // Here you would add functionality to actually add the item to a cart
+            };
+
+            document.getElementById('medicine-search').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchTerm = document.querySelector('#medicine-search input[type="text"]').value;
+                displayMedicines(searchTerm);
+            });
+
+            // Initial display
+            displayMedicines();
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

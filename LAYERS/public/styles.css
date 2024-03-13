@@ -1,0 +1,432 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+#booking-form {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#booking-form input[type=text], 
+#booking-form input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#booking-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#booking-form button:hover {
+    background: #0779e4;
+}
+#booking-form {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%; /* Ensures form responsiveness */
+    max-width: 500px; /* Adjusts max width for the form */
+    margin-left: auto;
+    margin-right: auto;
+}
+#medicine {
+    background: #f8f8f8;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+#medicine h2 {
+    color: #333;
+}
+
+#medicine-search {
+    margin-bottom: 20px;
+}
+
+#medicine-search input, #medicine-search button {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#medicine-search button {
+    cursor: pointer;
+    background-color: #0779e4;
+    color: white;
+    border: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+.section-separator {
+    border: 0;
+    height: 2px;
+    background-color: black; /* Makes the line black */
+    margin-top: 40px; /* Increased top margin */
+    margin-bottom: 40px; /* Increased bottom margin */
+}
+/* Adding an overall background image */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Section styling with background overlay for readability */
+.container {
+    background-color: rgba(13, 155, 221, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0; /* Adds space around sections */
+}
+/* Medicine Section Styling */
+#medicine {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#medicine:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+#medicine h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#medicine-search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#medicine-search input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#medicine-search button {
+    width: 20%;
+    padding: 10px;
+    background-color: #5cb85c; /* Attractive green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#medicine-search button:hover {
+    background-color: #4cae4c; /* Darker shade on hover */
+}
+
+#medicine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.medicine-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.medicine-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.medicine-item button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff; /* Bootstrap blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#cart {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart-summary, #review-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#checkout-btn, #submit-review {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff; /* Attractive blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout-btn:hover, #submit-review:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+#review-text {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #5DADE2; /* Blue */
+    padding: 20px 0;
+}
+
+.logo {
+    color: #FFF; /* White */
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #FFF; /* White */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FAD7A0; /* Yellow */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #F5B041; /* Orange */
+    color: #FFF; /* White */
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* Booking Section Styles */
+#booking {
+    background-color: #82E0AA; /* Green */
+    color: #FFF; /* White */
+    padding: 50px 0;
+    text-align: center;
+}
+
+#booking h2 {
+    margin-bottom: 20px;
+}
+
+#booking-form input, #booking-form select {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+#booking-form button {
+    padding: 10px 20px;
+    background-color: #3498DB; /* Blue */
+    color: #FFF; /* White */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#booking-form button:hover {
+    background-color: #2980B9; /* Darker Blue */
+}
+
+/* Medicine Section Styles */
+#medicine {
+    background-color: #A9DFBF; /* Light Green */
+    padding: 50px 0;
+    text-align: center;
+}
+
+#medicine h2 {
+    margin-bottom: 20px;
+}
+
+#medicine .subtitle {
+    margin-bottom: 40px;
+}
+
+#medicine-search {
+    margin-bottom: 20px;
+}
+
+#medicine-search input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+#medicine-search button {
+    padding: 10px 20px;
+    background-color: #3498DB; /* Blue */
+    color: #FFF; /* White */
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#medicine-search button:hover {
+    background-color: #2980B9; /* Darker Blue */
+}
+
+.medicine-item {
+    background-color: #EAF2F8; /* Light Gray */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.medicine-item h3 {
+    margin: 0;
+}
+
+.medicine-item p {
+    margin-top: 10px;
+}
+
+.medicine-item button {
+    padding: 10px 20px;
+    background-color: #3498DB; /* Blue */
+    color: #FFF; /* White */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.medicine-item button:hover {
+    background-color: #2980B9
